@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 import javax.swing.*;
 
 public class MainScreen extends JFrame {
-	public MainScreen() {
+	public MainScreen() {	
 		// JFrame 제목 설정
 		setTitle("Kiosks for study Cafe");
 		
