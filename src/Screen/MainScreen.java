@@ -55,7 +55,6 @@ public class MainScreen extends JFrame {
 	
 	// RUN 했을 때 실행순서가 시작되는 main 메소드
 	public static void main(String[] args) throws InterruptedException {
-		
 		new MainScreen();
 	}
 }
