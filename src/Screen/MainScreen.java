@@ -26,19 +26,19 @@ public class MainScreen extends JFrame {
 		
 		
 		
-		JButton btn1 = new JButton("자리 변경??");
-		btn1.setForeground(Color.BLACK);
-		btn1.setOpaque(true);	
-		btn1.setBackground(new Color(204, 255, 255, 200));
+		JButton RegistButton = new JButton("회원 가입");
+		RegistButton.setForeground(Color.BLACK);
+		RegistButton.setOpaque(true);	
+		RegistButton.setBackground(new Color(204, 255, 255, 200));
 		
 		// 버튼 크기와 위치 설정
 		Dimension buttonSize = new Dimension(150, 50);
 		StartButton.setPreferredSize(buttonSize);
-		btn1.setPreferredSize(buttonSize);
+		RegistButton.setPreferredSize(buttonSize);
 		
 		// 프레임에 추가하기
 		add(StartButton);
-		add(btn1);
+		add(RegistButton);
 		
 		setVisible(true);
 	}
