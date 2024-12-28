@@ -24,12 +24,22 @@ public class MainScreen extends JFrame {
 		StartButton.setOpaque(true);								// 투명도 설정 (true)
 		StartButton.setBackground(new Color(204, 255, 255, 200));	// (RED, GREEN, BLUE, 투명도) 
 		
-		
-		
 		JButton RegistButton = new JButton("회원 가입");
 		RegistButton.setForeground(Color.BLACK);
 		RegistButton.setOpaque(true);	
 		RegistButton.setBackground(new Color(204, 255, 255, 200));
+		
+		// JButton 클릭 이벤트 처리
+		StartButton.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				new SelectTimeScreen();
+				
+				// MainScreen 닫기
+				dispose();
+			}
+		});
 		
 		// 버튼 크기와 위치 설정
 		Dimension buttonSize = new Dimension(150, 50);
