@@ -7,19 +7,47 @@ import javax.swing.*;
 
 public class SearchMemberScreen extends JFrame {
 	public SearchMemberScreen() {
-		Dimension dim = new Dimension(600, 900);
-		
-		JFrame searchMember = new JFrame("search_member");
-		//searchMember.setLocation();
-		
 		setTitle("Kiosks for study cafe");
 		
 		// 창 크기 설정
-		//setSize(600, 900);
-		//setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setSize(600, 900);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		
 		// FlowLayout 객체 전달
 		setLayout(new FlowLayout(FlowLayout.CENTER, 0, 400));
+		
+		// 회원 이름 입력
+		JPanel namePanel = new JPanel();
+		namePanel.setLayout(new BoxLayout(namePanel, BoxLayout.X_AXIS));
+		namePanel.add(new JLabel("회원 이름 : "));
+		namePanel.add(new JTextField(15));
+		
+		JPanel phonePanel = new JPanel();
+		phonePanel.setLayout(new BoxLayout(phonePanel, BoxLayout.X_AXIS));
+		phonePanel.add(new JLabel("회원 전화번호 : "));
+		phonePanel.add(new JTextField(15));
+		
+		JPanel enterPanel = new JPanel();
+		enterPanel.add(new JButton("입력"));
+		
+		JPanel inputPanel = new JPanel();
+		inputPanel.setLayout(new BoxLayout(inputPanel, BoxLayout.Y_AXIS));
+		inputPanel.add(namePanel);
+		inputPanel.add(phonePanel);
+		inputPanel.add(enterPanel);
+		
+		add(inputPanel, BorderLayout.CENTER);
+		
+		setVisible(true);
+		
+		
+		
+		
+		
+		
+		
+		
+		/*
 		
 		// JPanel 생성 및 설정
 		JPanel inputPanel = new JPanel();
@@ -50,6 +78,8 @@ public class SearchMemberScreen extends JFrame {
 		inputPanel.add(phonePanel);
 				
 		setVisible(true);
+		
+		*/
 	}
 	
 	public static void main(String[] args) throws InterruptedException {
