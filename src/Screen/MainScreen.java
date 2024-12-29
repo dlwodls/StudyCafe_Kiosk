@@ -11,27 +11,34 @@ public class MainScreen extends JFrame {
 		setTitle("Kiosks for study Cafe");
 		
 		// 창 크기 설정
-		setSize(500, 800);
+		setSize(600, 900);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);	// 매개변수로 동작의 종류를 저장
 													// EXIT_ON_CLOSE는 프레임을 닫을 때 프로그램 전체가 종료됨  
 		// FlowLayout 객체 전달하기
-		setLayout(new FlowLayout(FlowLayout.CENTER, 30, 550));
+		setLayout(new FlowLayout(FlowLayout.CENTER, 10, 550));
 		
 		// 버튼 만들어서
-		JButton StartButton = new JButton("시작");
-		//StartButton.setBackground(Color.BLUE);					// 배경색 변경
-		StartButton.setForeground(Color.BLACK);						// 글자색 변경
-		StartButton.setOpaque(true);								// 투명도 설정 (true)
-		StartButton.setBackground(new Color(204, 255, 255, 200));	// (RED, GREEN, BLUE, 투명도) 
+		// 입실 버튼
+		JButton CheckInButton = new JButton("입실");
+		//CheckInButton.setBackground(Color.BLUE);					// 배경색 변경
+		CheckInButton.setForeground(Color.BLACK);					// 글자색 변경
+		CheckInButton.setOpaque(true);								// 투명도 설정 (true)
+		CheckInButton.setBackground(new Color(204, 255, 255, 200));	// (RED, GREEN, BLUE, 투명도) 
 		
-		JButton RegistButton = new JButton("회원 가입");
-		RegistButton.setForeground(Color.BLACK);
-		RegistButton.setOpaque(true);	
-		RegistButton.setBackground(new Color(204, 255, 255, 200));
+		// 퇴실 버튼
+		JButton CheckOutButton = new JButton("퇴실");
+		CheckOutButton.setForeground(Color.BLACK);
+		CheckOutButton.setOpaque(true);	
+		CheckOutButton.setBackground(new Color(204, 255, 255, 200));
+		
+		// 좌석이동 버튼
+		JButton SeatMovementButton = new JButton("좌석이동");
+		SeatMovementButton.setForeground(Color.BLACK);
+		SeatMovementButton.setOpaque(true);
+		SeatMovementButton.setBackground(new Color(204, 255, 255, 200));
 		
 		// JButton 클릭 이벤트 처리
-		StartButton.addActionListener(new ActionListener() {
-			
+		CheckInButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				new SelectTimeScreen();
@@ -41,20 +48,64 @@ public class MainScreen extends JFrame {
 			}
 		});
 		
+		CheckOutButton.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+			}
+		});
+		
 		// 버튼 크기와 위치 설정
 		Dimension buttonSize = new Dimension(150, 50);
-		StartButton.setPreferredSize(buttonSize);
-		RegistButton.setPreferredSize(buttonSize);
+		CheckInButton.setPreferredSize(buttonSize);
+		CheckOutButton.setPreferredSize(buttonSize);
+		SeatMovementButton.setPreferredSize(buttonSize);
 		
 		// 프레임에 추가하기
-		add(StartButton);
-		add(RegistButton);
+		add(CheckInButton);
+		add(CheckOutButton);
+		add(SeatMovementButton);
 		
 		setVisible(true);
 	}
 	
 	// RUN 했을 때 실행순서가 시작되는 main 메소드
 	public static void main(String[] args) throws InterruptedException {
+		
+		/*
+		Object[] title = {"요금제", "이용시간", "결제금액"};
+		
+		Object[][] TimeData = {
+				{"1회 시간권", "2시간", "5,000원"},
+				{"1회 시간권", "3시간", "7,000원"},
+				{"1회 시간권", "4시간", "8,000원"},
+				{"1회 시간권", "6시간", "12,000원"},
+				{"1회 시간권", "10시간", "16,000원"}
+		};
+		*/
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		new MainScreen();
 	}
 }

@@ -9,7 +9,7 @@ public class SelectTimeScreen extends JFrame {
 	public SelectTimeScreen() {
 		setTitle("Kiosks for study cafe");
 		
-		setSize(500, 800);
+		setSize(600, 900);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 			}
 	
